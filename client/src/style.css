@@ -1,0 +1,273 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1000px; /* Aumenté el ancho para mejor acomodo */
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+  }
+  
+  h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 2.2rem;
+  }
+  
+  /* Formulario */
+  .form-container {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  }
+  
+  /* Botones */
+  .button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .btn-primary {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  .btn-danger {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+  }
+  
+  .btn-success {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .btn-success:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #7f8c8d;
+  }
+  
+  /* Lista de Usuarios */
+  .user-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .user-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+  }
+  
+  .user-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-info {
+    flex: 1;
+  }
+  
+  .user-info h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+  }
+  
+  .user-info p {
+    margin: 5px 0 0;
+    color: #7f8c8d;
+  }
+  
+  .user-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Modo Edición */
+  .editing {
+    background-color: #fffde7;
+    border-left: 4px solid #f39c12;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .input-group {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+    }
+    
+    .input-group {
+      grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+    
+    .user-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .user-actions {
+      align-self: flex-end;
+    }
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .user-item {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+  
+  /* Estilos para React Hot Toast */
+  .hot-toast {
+    font-family: 'Segoe UI', sans-serif !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    padding: 16px 24px !important;
+  }
+  
+  .hot-toast-success {
+    background-color: #2ecc71 !important;
+    color: white !important;
+  }
+  
+  .hot-toast-error {
+    background-color: #e74c3c !important;
+    color: white !important;
+  }
+  
+  .hot-toast-loading {
+    background-color: #3498db !important;
+    color: white !important;
+  }
+
+  /* Estilos para iconos */
+.input-field {
+    position: relative;
+  }
+  
+  .input-field i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7f8c8d;
+    transition: all 0.3s;
+  }
+  
+  input {
+    padding-left: 40px !important; /* Espacio para el icono */
+  }
+  
+  input:focus + i {
+    color: #3498db;
+  }
+  
+  /* Iconos en botones */
+  button i {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  
+  /* Iconos en lista de usuarios */
+  .user-info i {
+    font-size: 24px;
+    color: #3498db;
+    margin-right: 15px;
+  }
+  
+  /* Animación para iconos */
+  button:hover i {
+    transform: scale(1.1);
+  }
+  
+  /* Título con icono */
+  h1 i {
+    margin-right: 15px;
+    color: #2ecc71;
+  }
